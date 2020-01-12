@@ -6,19 +6,28 @@
           <div class="row">
             <div class="col-md-6">
               <div class="row">
-                <button mat-raised-button color="accent" id="q" (click)="playSound('q')"> Q</button>
-                <button mat-raised-button color="accent" id="w" (click)="playSound('w')"> W</button>
-                <button mat-raised-button color="accent" id="e" (click)="playSound('s')"> E</button>
+                <button mat-raised-button color="accent" id="q" (click)="!this.turnoff ? q.play() && this.sounds='q ' : this.sounds = 'Turned off \n'"> Q</button>
+                <audio #q src="../assets/sound/q.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id="w" (click)="!this.turnoff ? w.play() && this.sounds='w ' : this.sounds = 'Turned off \n'"> W</button>
+                <audio #w src="../assets/sound/w.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id="e" (click)="!this.turnoff ? e.play() && this.sounds='e ' : this.sounds = 'Turned off \n'"> E</button>
+                <audio #e src="../assets/sound/e.mp3" style="display: none;"></audio>
               </div>
               <div class="row">
-                <button mat-raised-button color="accent" id="a" (click)="playSound('a')"> A</button>
-                <button mat-raised-button color="accent" id="s" (click)="playSound('s')"> S</button>
-                <button mat-raised-button color="accent" id="d" (click)="playSound('d')"> D</button>
+                <button mat-raised-button color="accent" id="a" (click)="!this.turnoff ? a.play() && this.sounds='a ' : this.sounds = 'Turned off \n'"> A</button>
+                <audio #a src="../assets/sound/a.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id="s" (click)="!this.turnoff ? s.play() && this.sounds='s ' : this.sounds = 'Turned off \n'"> S</button>
+                <audio #s src="../assets/sound/s.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id="d" (click)="!this.turnoff ? d.play() && this.sounds='d ' : this.sounds = 'Turned off \n'"> D</button>
+                <audio #d src="../assets/sound/d.mp3" style="display: none;"></audio>
               </div>
               <div class="row">
-                <button mat-raised-button color="accent" id="z" (click)="playSound('z')"> Z</button>
-                <button mat-raised-button color="accent" id="x" (click)="playSound('x')"> X</button>
-                <button mat-raised-button color="accent" id='c' (click)="playSound('c')"> C</button>
+                <button mat-raised-button color="accent" id="z" (click)="!this.turnoff ? z.play() && this.sounds='z ' : this.sounds = 'Turned off \n'"> Z</button>
+                <audio #z src="../assets/sound/z.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id="x" (click)="!this.turnoff ? x.play() && this.sounds='x ' : this.sounds = 'Turned off \n'"> X</button>
+                <audio #x src="../assets/sound/x.mp3" style="display: none;"></audio>
+                <button mat-raised-button color="accent" id='c' (click)="!this.turnoff ? c.play() && this.sounds='c ' : this.sounds = 'Turned off \n'"> C</button>
+                <audio #c src="../assets/sound/c.mp3" style="display: none;"></audio>
               </div>
             </div>
             <div class="col-md-6">
